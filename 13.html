@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta author="Wilson">
+        <title>Submit your information</title>
+        <style>
+           /* CSS element rules */   
+            body {
+                font-family: Arial;}            
+            fieldset {
+                background:lightyellow; 
+                border:10px solid yellow; 
+                margin-bottom: 10px; 
+                width: 720px; }
+            textarea {
+                width:360px; 
+                height: 50px }
+            label {
+                width: 180px; 
+                display: inline-block; 
+                vertical-align: top; 
+                text-align: right; }
+            label:hover {font-size: 20px};
+            input:hover {width: 300px; font-size:20px; color:red};
+            table {width: 300px}
+            
+            /* CSS classes rules */
+            .lrangeind {
+                display: inline-block; 
+                text-align: center; 
+                color: white; 
+                background: purple; 
+                width: 70px;}
+            .rrangeind {
+                display: inline-block; 
+                text-align: center; 
+                color: white; 
+                background: darkred; 
+                width: 70px;}
+        </style>
+    </head>
+<body>
+    <h1>Please Enter Your Details For Our Dating Website!</h1>
+    <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post">
+        <!-- Face Section -->
+        <fieldset>
+            <legend>Your Face</legend>
+            <label for="image">Your image: </label>
+                <input type="file" id="image" required>
+            <br />
+            <label for="preview">Image preview: </label>
+                <img id="preview" name="preview" width="300px">
+        </fieldset>
+       
+        <!-- General Details Section -->
+        <fieldset>
+            <legend>Your General Details</legend>
+            <label for="name">Name: </label>
+                <input type="text" name="name" id="name" placeholder="Your full name" required>
+            <br />
+            <label for="genger">Gender: </label>
+                <input type="radio" id="" name="gender" value="Male" required>Male
+                <input type="radio" id="" name="gender" value="Female" required>Female
+            <br />
+            <label for="age">Age: </label>
+                <input type="number" name="age" id="age" required>
+            <br />
+           <label for="dob">Date of Birth: </label>
+                <input type="date" name="dob" id="dob">
+            <br />
+            <label for="color">Favorite color: </label>
+                <input type="color" name="color" id="color">
+            <br />
+            <label for="country">Country: </label>
+                <select id="country" name="country">
+                    <option value="nosel">(No Selection)</option>
+                    <option value="dr">Dominican Republic</option>
+                    <option value="usa">USA</option>
+                    <option value="china">China</option>
+                    <option value="uk">UK</option>
+                    <option value="russia">Russia</option>
+                </select>
+        </fieldset>
+       
+        <!-- Indicators Section -->
+        <fieldset>
+            <legend>Your Indicators</legend>
+            <table>
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td><label for="height">Height: </label></td>
+                        <td><span class="lrangeind">Short</span></td>
+                        <td><input type="range" name="height" id="height" min="0" max="100"></td>
+                        <td><span class="rrangeind">Tall</span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="salary">Salary: </label></td>
+                        <td><span class="lrangeind">Poor</span></td>
+                        <td><input type="range" name="salary" id="salary" min="0" max="100"></td> 
+                        <td><span class="rrangeind">Rich</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+       
+        <!-- Contact Info Section -->
+        <fieldset>
+            <legend>Your Contact Information</legend>
+           <label for="email">Email: </label>
+                <input type="email" name="email" id="email" required>
+            <br />
+            <label for="phone">Mobile: </label>
+                <input type="tel" name="phone" id="phone">
+            <br />
+            <label for="address" >Address: </label>
+                <textarea id="address" name="address"></textarea>
+            <br />
+            <label for="contact">Method to contact you: </label>
+                <input type="checkbox" id="" name="email" value="email"> Email
+                <input type="checkbox" id="" name="whatsapp" value="whatsapp"> WhatsApp
+                <input type="checkbox" id="" name="inappchat" value="inappchat"> In-App Chat
+        </fieldset>
+        <input type="submit" value="Submit!">
+    </form>
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+</html>
